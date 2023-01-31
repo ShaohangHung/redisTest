@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    redis-test:
+        image:
+        command:
+        envirenment:
+        volumes:
+        networks:
+        ports:
+    servicename2:
+
+volumes:
+
+networks:

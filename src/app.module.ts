@@ -7,7 +7,6 @@ import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [ConfigModule, RedisModule],
-
   controllers: [AppController],
   providers: [AppService, CacheService],
 })
