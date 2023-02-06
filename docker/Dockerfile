@@ -21,6 +21,7 @@ RUN apt-get update && \
     npm ci && \
     npm run build
 
+RUN ls
     
 # port, it functions as a type of documentation. use the -p flag on "docker run" to publsih and mapping.
 EXPOSE 3000
