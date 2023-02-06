@@ -1,13 +1,14 @@
 version: "3.4"
 
 services:
-    howard-test:
-        image: redis_server_0206:latest
+    redis-test:
+        build: ./docker
+        image: redis-test:latest
         networks:
             - demo-network
         ports:
             - 5000:3000
-    redis-serv:
+    redis-server:
         image: redis:latest
         ports:
             - 6379:6379
