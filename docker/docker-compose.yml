@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
     redis-test:
-        build: ./docker
+        build: ./
         image: redis-test:latest
         networks:
             - demo-network
