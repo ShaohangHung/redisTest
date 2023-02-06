@@ -1,15 +1,16 @@
 version: "3.8"
 
 services:
-    redis-test:
-        image:
-        command:
-        envirenment:
-        volumes:
+    howard-test:
+        image: howardhung:test0206
         networks:
+            - demo-network
         ports:
-    servicename2:
-
-volumes:
+            - 5000:3000
+    redis-serv:
+        image: redis:latest
+        networks:
+            - demo-network
 
 networks:
+    demo-network:
