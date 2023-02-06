@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
     howard-test:
-        image: howardhung:test0206
+        image: redis_server_0206:latest
         networks:
             - demo-network
         ports:
