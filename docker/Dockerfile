@@ -13,9 +13,7 @@ RUN echo "VERSION=$VERSION"
 WORKDIR /usr/src/app
 
 # bundle your app's source code inside the Docker image
-COPY ../ .
-
-RUN ls
+COPY . .
 
 # npm ci to use package-lock.json, fix the version
 RUN apt-get update && \
