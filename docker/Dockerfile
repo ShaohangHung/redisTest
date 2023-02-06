@@ -13,7 +13,7 @@ RUN echo "VERSION=$VERSION"
 WORKDIR /usr/src/app
 
 # bundle your app's source code inside the Docker image
-COPY . .
+COPY ../ .
 
 RUN ls
 
