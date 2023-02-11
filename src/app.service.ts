@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import os from 'node:os';
+import * as os from 'os';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return `Hello World, my hostname is ${os.hostname()}`;
+    console.log(os.networkInterfaces());
+    return `Hello World, my hostname = ${os.hostname()}`;
   }
 }
