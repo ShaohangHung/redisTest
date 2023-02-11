@@ -2,6 +2,9 @@ version: "3.4"
 
 services:
     redis-test:
+        build: 
+            context: ./docker
+            dockerfile: Dockerfile
         image: redis-test:latest
         networks:
             - frontend
