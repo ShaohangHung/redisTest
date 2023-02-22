@@ -33,7 +33,6 @@ services:
         depends_on:
             redis-test:
                 condition: service_healthy
-
         networks:
             - frontend
 
