@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.4"
 
 services:
     redis-test:
@@ -26,8 +26,7 @@ services:
     nginx:
         image: nginx:stable-alpine
         depends_on:
-            redis-test: 
-                condition: service_healthy
+            - redis-test
         ports:
             - 3000:80
         volumes:
