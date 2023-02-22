@@ -1,15 +1,15 @@
-version: "3.4"
+version: "3.9"
 
 services:
     redis-test:
-        build: 
+        build:
             context: ./
             dockerfile: ./docker/Dockerfile
         image: redis-test:latest
         environment:
             - REDIS_HOST=redis-server
         healthcheck:
-            test: ["CMD", "curl","-f","http://localhost:3000/asd"]
+            test: [ "CMD", "curl", "-f", "http://localhost:3000/asd" ]
             interval: 30s
             timeout: 3s
             retries: 3
@@ -26,8 +26,7 @@ services:
     nginx:
         image: nginx:stable-alpine
         depends_on:
-            redis-test: 
-                condition: service_healthy
+            - redis-test
         ports:
             - 3000:80
         volumes:
