@@ -6,11 +6,17 @@ services:
             context: ./
             dockerfile: ./docker/Dockerfile
         image: redis-test:latest
+        environment:
+            - REDIS_HOST=redis-server
+        healthcheck:
+            test: ["CMD", "curl","-f","http://localhost:3000/asd"]
+            interval: 30s
+            timeout: 3s
+            retries: 3
+            start_period: 40s
         networks:
             - frontend
             - backend
-        environment:
-            - REDIS_HOST=redis-server
     redis-server:
         image: redis:latest
         # ports:
